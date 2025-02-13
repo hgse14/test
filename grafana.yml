@@ -1,16 +1,22 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: grafana-cluster
+  region: us-east-1
 vpc:
   vpcId: vpc-0fa05ddd5e757c455
   subnets:
     private:
       # Puedes definir subredes privadas si las tienes
       # Ejemplo:
-      # us-east-1a:
+      # us-east-1b:
       #   cidr: 172.0.32.0/20
       # us-east-1b:
       #   cidr: 172.0.48.0/20
     public:
-      us-east-1a:
-        cidr: 172.0.0.0/20
+      us-east-1b:
+        cidr: 172.0.32.0/20
       us-east-1a:
         cidr: 172.0.16.0/20
 
